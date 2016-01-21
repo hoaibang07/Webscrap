@@ -1,0 +1,25 @@
+PhantomJS is launching GhostDriver...
+[INFO  - 2016-01-15T20:17:06.723Z] GhostDriver - Main - running on port 58034
+[INFO  - 2016-01-15T20:17:07.512Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-15T20:17:07.512Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.customHeaders:  - {}
+[INFO  - 2016-01-15T20:17:07.512Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"linux-unknown-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-15T20:17:07.513Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f35423f0-bbc4-11e5-a3f2-f746eb633af2
+[ERROR - 2016-01-15T20:17:10.488Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'Phim3s.Watch.registerHistoryPopstate()')
+[ERROR - 2016-01-15T20:17:10.489Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.onError - stack:
+  (anonymous function) (http://anime47.com/js/phim3s-4.0.0.js?v=01062013082812:163)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:3)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:3)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:3)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:3)
+[ERROR - 2016-01-15T20:17:13.577Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.onError - msg: ReferenceError: Can't find variable: vtlai_popup
+[ERROR - 2016-01-15T20:17:13.577Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.onError - stack:
+  onclick (http://anime47.com/xem-phim-one-piece-dao-hai-tac-ep-003/76750.html:39)
+[ERROR - 2016-01-15T20:17:40.497Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.onError - msg: ReferenceError: Can't find variable: vtlai_popup
+[ERROR - 2016-01-15T20:17:40.497Z] Session [f35423f0-bbc4-11e5-a3f2-f746eb633af2] - page.onError - stack:
+  onclick (http://anime47.com/xem-phim-one-piece-dao-hai-tac-ep-003/76750.html:39)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:5)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:5)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:3)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:3)
+  (anonymous function) (http://anime47.com/js/movie.jq.js:5)
+  (anonymous function) (http://anime47.com/xem-phim-one-piece-dao-hai-tac-ep-003/76750.html:255)

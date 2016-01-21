@@ -13,6 +13,7 @@ anime47url = 'http://anime47.com/xem-phim-one-piece-dao-hai-tac-ep-003/76750.htm
 browser.get(anime47url)
 
 show_hide = browser.find_elements_by_class_name('show_hide')[0]
+#execute javascript function
 show_hide.click()
 
 content = browser.page_source
@@ -22,6 +23,6 @@ linkDownload = soup.find('div', attrs = {'id' : 'taiphim'})
 
 print linkDownload
 
-browser.quit()
+# browser.quit()
 
 # display.stop()
