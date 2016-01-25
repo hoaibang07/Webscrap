@@ -1,6 +1,6 @@
 import requests
 
-r = requests.get('https://translate.google.com/#en/vi/yellow')
+r = requests.get('http://www.anhvietsongngu.com/alice-o-xu-than-tien-1a/')
 for c in r.cookies:
 	print(c.name)
 	print('het ten')
