@@ -1,2 +1,5 @@
 http://www.seleniumhq.org/docs/03_webdriver.jsp
 http://selenium-python.readthedocs.org/en/latest/waits.html
+
+http://scraping.pro/javascript-protected-content-scrape/
+http://casperjs.org/

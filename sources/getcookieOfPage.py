@@ -1,6 +1,6 @@
 import requests
 
-r = requests.get('http://www.anhvietsongngu.com/alice-o-xu-than-tien-1a/')
+r = requests.get('http://www.transcripture.com/vietnamese-chinese-genesis-1.html')
 for c in r.cookies:
 	print(c.name)
 	print('het ten')
