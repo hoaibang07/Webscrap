@@ -35,6 +35,29 @@ ffprofile.set_preference("thatoneguydotnet.QuickJava.startupStatus.Silverlight",
 driver = webdriver.Firefox(ffprofile)
 
 
+def loadpage(urlsach):
+    try:
+        # Load a page
+        start_time = time.time() 
+        driver.get(urlsach)
+        delay = 15 # seconds
+        wait = WebDriverWait(driver, delay)
+        path = '/html/body/center/center/div/div[1]/a'
+        elem = driver.find_element_by_xpath(path)
+        wait.until(EC.visibility_of(elem))
+        print "Page is ready!"
+        endtime = time.time()
+        execute_time = endtime - start_time
+        print('Time page loading is %f'%execute_time)
+        return True
+    except Exception, e:
+        print "Page is not ready!"
+        se = str(e)
+        print('Error detail: %s' %se)
+        # raise e
+        return False
+
+
 def geturl_chuong(urlsach, i):
     filename = 'urlsach/sach' + str(i) + '.txt'
     ftmp = io.open(filename, 'w', encoding='utf-8')
@@ -54,24 +77,21 @@ def geturl_chuong(urlsach, i):
         # # get response
         # response = urllib2.urlopen(req)
         # soup = BeautifulSoup(response.read())
+        ct = 0
+        while True:
 
-        driver.get(urlsach)
-            # delay = 40 # seconds
-
-            # try:
-            #     wait = WebDriverWait(driver, delay)
-            #     path = '/html/body/center/div[1]/div[2]/div[4]/table/tbody/tr[2]/td[1]/div/div[1]/form[1]/select/option[66]'
-            #     elem = driver.find_element_by_xpath(path)
-            #     wait.until(EC.visibility_of(elem))
-            #     print "Page is ready!"
-                
-            # except TimeoutException:
-            #     print "Loading took too much time!"
-
-            #     #reload page
-            #     body = driver.find_element_by_tag_name("body")
-            #     body.send_keys(Keys.ESCAPE)
-            #     body.send_keys(Keys.F5)
+            #Neu load page thanh cong
+            if(loadpage(urlsach)):
+                break
+            else:
+                time.sleep(3)
+                #dem loi tang len 1
+                ct = ct + 1
+                if(ct == 4):
+                    # close file
+                    ftmp.close()
+                    print('Not load the page. program exit')
+                    sys.exit()
 
         content = driver.page_source
         soup = BeautifulSoup(content)

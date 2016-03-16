@@ -20,7 +20,8 @@ def main(url):
     # driver = webdriver.Firefox()
     driver.get("about:blank")
 
-    time.sleep(15)
+    print('Nhap vao mot ky tu bat ky de tiep tuc chuong trinh')
+    key = raw_input()
 
     body = driver.find_element_by_tag_name("body")
     body.send_keys(Keys.CONTROL + 't')
@@ -50,11 +51,12 @@ def main(url):
         print "Loading took too much time!"
 
         #reload page
-        body = driver.find_element_by_tag_name("body")
-        body.send_keys(Keys.F5)
-
-    execute_time = time.time() - start_time
-    print('Time execute is %d'%execute_time)
+        # body = driver.find_element_by_tag_name("body")
+        # body.send_keys(Keys.F5)
+        driver.refresh()
+    endtime = time.time()
+    execute_time = endtime - start_time
+    print('Time page loading is %f'%execute_time)
     
     # close the tab
     driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'w')
@@ -62,5 +64,5 @@ def main(url):
 
 
 if __name__ == '__main__':
-    main_url = 'http://www.transcripture.com/vietnamese-chinese-genesis-1.html'
+    main_url = 'http://www.transcripture.com/english-vietnamese-genesis-1.html'
     main(main_url)

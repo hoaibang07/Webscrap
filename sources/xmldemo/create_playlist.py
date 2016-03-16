@@ -22,9 +22,11 @@ def create_play_list():
             data = line.split(';')
             title_ = unicode(data[0], encoding = 'utf-8')
             link_ = unicode(data[3], encoding = 'utf-8').replace('\n','')
+            img_url = 'http://img.youtube.com/vi/' + link_.split("?v=")[1] + '/2.jpg'
             track = ET.SubElement(trackList, 'track')
             ET.SubElement(track, 'location').text = link_
             ET.SubElement(track, 'title').text = title_
+            ET.SubElement(track, 'image').text = img_url
     except Exception, e:
         er = str(e)
         print('Loi o dong %d cua file, chi tiet loi %s'%(i,er))
